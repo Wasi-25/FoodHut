@@ -7,7 +7,7 @@ const MyOrder = () => {
     const [orderData, setorderData] = useState({})
 
     const fetchMyOrder = async () => {
-        await fetch("http://localhost:8000/api/myOrderData", {
+        await fetch("https://foodhut.onrender.com/api/myOrderData", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
