@@ -9,7 +9,7 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:8000/api/createuser", {
+        const response = await fetch("https://foodhut.onrender.com/api/createuser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
