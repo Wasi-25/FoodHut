@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const port = process.env.PORT || 8000;
+const path = require("path");
 const mongoDB = require("./db");
 mongoDB();
 
@@ -39,6 +40,7 @@ app.get("*",(req,res)=>{
 app.get("*",(req,res)=>{
     res.sendFile(path.resolve(__dirname, "../build/index.html"));
 });
+
 
 app.listen(port, ()=>{
     console.log(`Server is listening to ${process.env.PORT}`);
