@@ -75,7 +75,7 @@ const Card = (props) => {
                 </div>
             </div>
             <hr></hr>
-            <button className={`btn rounded-0`} style={{backgroundColor:"black", marginLeft:"74px", marginBottom:"19px", marginTop:"-22px"}} onClick={handleAddToCart}>Add to Cart</button>
+            <button className={`btn rounded-0 cartButton`} style={{backgroundColor:"black", marginLeft:"74px", marginBottom:"19px", marginTop:"-22px", color:"white"}} onClick={handleAddToCart}>Add to Cart</button>
           </div>
         </div>
       </div>
