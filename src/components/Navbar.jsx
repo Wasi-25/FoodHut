@@ -54,12 +54,12 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav me-auto">
                 <li className="nav-item">
-                  <Link className="nav-link" aria-current="page" style={{color:"black", fontSize:"0.9rem"}} to="/">HOME</Link>
+                  <Link className="nav-link linknav" aria-current="page" style={{color:"black", fontSize:"0.9rem"}} to="/">HOME</Link>
                 </li>
                 {
                   (localStorage.getItem("authToken"))?
                   <li className="nav-item">
-                  <Link className="nav-link" aria-current="page" to="/myOrder" style={{color:"black", fontSize:"0.9rem"}}>MY ORDERS</Link>
+                  <Link className="nav-link linknav" aria-current="page" to="/myOrder" style={{color:"black", fontSize:"0.9rem"}}>MY ORDERS</Link>
                 </li>
                 :""}
               </ul>
@@ -67,21 +67,21 @@ const Navbar = () => {
               {
                   (!localStorage.getItem("authToken"))?
                 <div className="d-flex">
-                  <Link className="btn mx-1" to="/login" style={{color:"white", backgroundColor:"black"}}>Login</Link>
-                  <Link className="btn mx-1" to="/createuser" style={{color:"white", backgroundColor:"black"}}>Sign up</Link>
+                  <Link className="btn mx-1 linknav" to="/login" style={{color:"white", backgroundColor:"black"}}>Login</Link>
+                  <Link className="btn mx-1 linknav" to="/createuser" style={{color:"white", backgroundColor:"black"}}>Sign up</Link>
                 </div>
                 :
                 <div>
                   {data.length > 0 && 
-                  <div className="btn mx-3 rounded-0" style={{color:"white", backgroundColor:"black", fontSize:"0.8rem"}} onClick={()=>{setCartView(true)}}>MY CART {"  "} {<Badge pill bg="danger">{data.length}</Badge>}</div>
+                  <div className="btn mx-3 rounded-0 linknav" style={{color:"white", backgroundColor:"black", fontSize:"0.8rem"}} onClick={()=>{setCartView(true)}}>MY CART {"  "} {<Badge pill bg="danger">{data.length}</Badge>}</div>
                   }
 
                   {data.length === 0 &&
-                    <div className="btn mx-3 rounded-0" style={{ color: "white", backgroundColor: "black", fontSize: "0.8rem" }} onClick={() => { setCartView(true) }}>MY CART</div>
+                    <div className="btn mx-3 rounded-0 linknav" style={{ color: "white", backgroundColor: "black", fontSize: "0.8rem" }} onClick={() => { setCartView(true) }}>MY CART</div>
                   }
 
                   {cartView? <Modal onClose={()=>setCartView(false)}><Cart/></Modal>: null}
-                  <div className="btn text-danger mx-1 rounded-0" style={{boxShadow:"0px 0px 7px black", fontSize:"0.8rem"}} onClick={logoutHandler}>LOGOUT</div>
+                  <div className="btn text-danger mx-1 rounded-0 linknav" style={{boxShadow:"0px 0px 7px black", fontSize:"0.8rem"}} onClick={logoutHandler}>LOGOUT</div>
                 </div>
                 }
             </div>
