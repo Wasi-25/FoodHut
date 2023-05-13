@@ -28,8 +28,8 @@ nav{
     margin-top: -18px;
   }
   .linknav{
-    font-size: 0.3rem !important;
-    padding:2px !important;
+    font-size: 0.4rem !important;
+    padding:3px !important;
   }
   .searchh{
     padding: 1px !important;
@@ -40,5 +40,8 @@ nav{
   .cardcomp{
     display: flex;
     justify-content: center;
+  }
+    .form-control{
+    width: 50%;
   }
 }
