@@ -43,11 +43,11 @@ const Login = () => {
                 <form onSubmit={handleSubmit} className='mt-5'>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                        <input type="email" className="form-control bg-transparent text-dark" id="exampleInputEmail1" aria-describedby="emailHelp" style={{width:"34%"}} placeholder='Enter Your Email' name='email' value={credentials.email} onChange={onChange} />
+                        <input type="email" className="formin form-control bg-transparent text-dark" id="exampleInputEmail1" aria-describedby="emailHelp" style={{width:"34%"}} placeholder='Enter Your Email' name='email' value={credentials.email} onChange={onChange} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                        <input type="password" style={{width:"34%", padding:"0.5rem 0.75rem"}} className="form-control bg-transparent text-dark" id="exampleInputPassword1" name='password' placeholder='Enter Your Password' value={credentials.password} onChange={onChange} />
+                        <input type="password" style={{width:"34%", padding:"0.5rem 0.75rem"}} className="formin form-control bg-transparent text-dark" id="exampleInputPassword1" name='password' placeholder='Enter Your Password' value={credentials.password} onChange={onChange} />
                     </div>
                     <button type="submit" className="btn" style={{color:"white", backgroundColor:"black"}}>Login</button>
                     <Link to="/createuser" className='m-3 btn btn-danger'>New User ?</Link>
