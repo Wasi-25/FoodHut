@@ -37,9 +37,20 @@ const Navbar = () => {
   return (
     <>
       <div>
-        <nav className={`navbar navbar-expand-lg mx-3 my-2 ${navbarClassName}`} style={{ backgroundColor: "whitesmoke", width: "97.5%", position: "sticky", top: 0, zIndex: 999, transition: "top 0s ease 0s"}}>
+        <nav className={`navbar navbar-expand mx-3 my-2 ${navbarClassName}`} style={{ backgroundColor: "whitesmoke", width: "97.5%", position: "sticky", top: 0, zIndex: 999, transition: "top 0s ease 0s"}}>
           <div className="container-fluid">
             <Link className="navbar-brand fs-1 fst-italic" style={{color:"black"}} to="/">FoodHut</Link>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav me-auto">
                 <li className="nav-item">
