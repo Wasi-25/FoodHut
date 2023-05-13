@@ -23,3 +23,22 @@ nav{
 #carousel{
   max-height: 500px;
 }
+@media screen and (max-width: 600px){
+  .cartButton{
+    margin-top: -18px;
+  }
+  .linknav{
+    font-size: 0.5rem !important;
+    padding:3px !important;
+  }
+  .searchh{
+    padding: 1px !important;
+    font-size: 0.75rem !important;
+    position: absolute;
+    bottom: 0;
+  }
+  .cardcomp{
+    display: flex;
+    justify-content: center;
+  }
+}
