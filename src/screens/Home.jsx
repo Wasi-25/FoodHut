@@ -40,7 +40,7 @@ const Home = () => {
                 <div className="carousel-inner" id='carousel'>
                     <div className="carousel-caption" style={{zIndex:"5"}}>
                         <div className="d-flex justify-content-center">
-                            <input className="form-control me-2 text-white rounded-0" style={{backgroundColor:"black"}} type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
+                            <input className="form-control me-2 text-white rounded-0 searchh" style={{backgroundColor:"black"}} type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
                         </div>
                     </div>
                     <div className="carousel-item active">
@@ -82,7 +82,7 @@ const Home = () => {
                     foodItem.filter((item)=> (item.CategoryName === data.CategoryName) && (item.name.toLowerCase().includes(search.toLocaleLowerCase())))
                     .map(filterItems=>{
                       return(
-                        <div key={filterItems._id} className="d-flex justify-content-centercol-12 col-md-6 col-lg-3">
+                        <div key={filterItems._id} className="cardcomp d-flex justify-content-center col-12 col-md-6 col-lg-3">
                           <Card
                           foodItem = {filterItems}
                           options = {filterItems.options[0]}
